@@ -1,0 +1,5 @@
+selenium
+webdriver_manager
+beautifulsoup4
+pandas
+numpy
