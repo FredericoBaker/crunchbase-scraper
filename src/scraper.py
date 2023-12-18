@@ -26,7 +26,6 @@ class Crunchbase:
         options.add_argument("--disable-blink-features=AutomationControlled")
         options.add_experimental_option("excludeSwitches", ["enable-automation"]) 
         options.add_experimental_option("useAutomationExtension", False)
-        options.add_argument(r"--user-data-dir=C:\\Users\\fredb\\AppData\\Local\\Google\\Chrome\\User Data")
         self.__driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), chrome_options=options)
         self.__driver.execute_cdp_cmd("Network.setUserAgentOverride", {"userAgent": self.__useragentarray[self.__curAgentIdx]})
     
@@ -131,7 +130,7 @@ class Crunchbase:
         
     def get_funding_rounds(self):
         start_page = 1
-        end_page = 100 # Change to how many you want to collect
+        end_page = 100 # Change to how many pages you want to collect
         url = f"https://www.crunchbase.com/discover/funding_rounds"
         
         self.__driver.get(url=url)
@@ -142,12 +141,12 @@ class Crunchbase:
 
             time.sleep(5.1)
 
-            self.__funding_data = pd.read_csv("./data-collected/funding_rounds.csv")
+            self.__funding_data = pd.read_csv("./data/funding_rounds.csv")
 
             data = self.get_page_funding_rounds()
 
             self.__funding_data = pd.concat([self.__funding_data, data], ignore_index=True)
-            self.__funding_data.to_csv('./data-collected/funding_rounds.csv', index=False)
+            self.__funding_data.to_csv('./data/funding_rounds.csv', index=False)
 
             print(f"Page {start_page} collected.")
             start_page += 1
@@ -155,6 +154,7 @@ class Crunchbase:
             time.sleep(3.1)
 
             got_next_page = self.next_page()
+            
             if got_next_page is False:
                 print("Error: couldn't get next page.")
                 break

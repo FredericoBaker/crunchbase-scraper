@@ -1,4 +1,4 @@
-from src.crunchbase import Crunchbase
+from src.scraper import Crunchbase
 
 crunchbase = Crunchbase()
 
