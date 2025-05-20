@@ -3,6 +3,8 @@
 ## Overview
 The Crunchbase Scraper is a tool designed to extract funding round information from Crunchbase, a leading platform for finding business information about private and public companies. This script is particularly useful for researchers, investors, and analysts who need up-to-date data on company funding rounds.
 
+*For those who want to scale fast, consider using [Bright Data's Crunchbase Scraper API](https://brightdata.com/tools/scraper/crunchbase) as an alternative automated solution.*
+
 ## Prerequisites
 Before using the Crunchbase Scraper, ensure you have the following prerequisites:
 
@@ -25,9 +27,10 @@ Follow these steps to set up the Crunchbase Scraper:
    pip install -r requirements.txt
    ```
 
-3. **Crunchbase Account Login**: Before running the script, log in to your Crunchbase premium account in chrome web browser. This step is crucial as the scraper relies on your account's access permissions to retrieve data.
+3. **Crunchbase Account Login**: Before running the script, log in to your Crunchbase premium account in Chrome web browser. This step is crucial as the scraper relies on your account's access permissions to retrieve data.
 
 ## Usage
+
 To run the Crunchbase Scraper, execute the following command in the terminal:
 
 ```bash
