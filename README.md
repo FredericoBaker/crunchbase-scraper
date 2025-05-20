@@ -3,7 +3,10 @@
 ## Overview
 The Crunchbase Scraper is a tool designed to extract funding round information from Crunchbase, a leading platform for finding business information about private and public companies. This script is particularly useful for researchers, investors, and analysts who need up-to-date data on company funding rounds.
 
-*For those who want to scale fast, consider using [Bright Data's Crunchbase Scraper API](https://brightdata.com/tools/scraper/crunchbase) as an alternative automated solution.*
+> ⚡ **Looking to scale faster?**  
+> Consider using [Bright Data's Crunchbase Scraper API](https://brightdata.com/products/web-scraper/crunchbase) for a ready-to-use, scalable solution.
+>
+> This API offers automated data extraction without the need for manual scraping.
 
 ## Prerequisites
 Before using the Crunchbase Scraper, ensure you have the following prerequisites:
